@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.description = %q{A Ruby interface to the Adobe Connect API.}
   spec.summary = %Q{A Ruby interface to the Adobe Connect API.}
   spec.email = "ayanbule@gmail.com"
-  spec.files = %w(CHANGELOG.md LICENSE.md README.md Rakefile adobe_connect.gemspec)
+  spec.files = %w(LICENSE.txt README.rdoc Rakefile adobe_connect.gemspec)
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("spec/**/*")
   spec.homepage = 'https://github.com/ayanbule/adobe_connect'
