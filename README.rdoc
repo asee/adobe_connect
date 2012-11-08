@@ -1,6 +1,7 @@
 = adobe_connect
 
-## Installation
+Installation
+---------------
 
 Add this line to your application's Gemfile:
 
@@ -10,9 +11,10 @@ And then execute:
 
     $ bundle
 
-## Usage
-Initializer:
-This can be in config/initializers/adobe_connect.rb for example
+Getting started
+---------------
+
+This can be in <em>config/initializers/adobe_connect.rb</em> for example:
 	
 	AdobeConnect.configure do |config|
        config.url 		= 'https://xyz.adobeconnect.com'
@@ -27,6 +29,7 @@ To use:
 	@connect = AdobeConnect.new
 
 This will automatically log into adobe connect web service with the default configurations in the initializer.
+
 To instantiate with a different adobe connect account: 
 
 	@connect = AdobeConnect.new({
@@ -73,11 +76,11 @@ Create a meeting:
     	'source-sco-id'	=> 123
 	})
 
-Set meeting as public
+Set meeting as public:
 
 	@connect.permissions_update({'principal-id' => 'public-access','acl-id' => sco_id, 'permission-id' => 'view-hidden' })
 
-Add principal as host of meeting
+Add principal as host of meeting:
 
 	@connect.permissions_update({'principal-id' => principal_id,'acl-id' => sco_id, 'permission-id' => 'host' })
 
