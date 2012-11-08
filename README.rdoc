@@ -1,4 +1,4 @@
-= adobe_connect
+= Adobe Connect API wrapper
 
 === Installation
 
@@ -15,11 +15,11 @@ And then execute:
 This can be in <em>config/initializers/adobe_connect.rb</em> for example:
 	
   AdobeConnect.configure do |config|
-    config.url 		= 'https://xyz.adobeconnect.com'
-    config.url_path 	= '/api/xml'
-    config.username 	= 'user'
-    config.password 	= 'connectpassword'
-    config.account 	= 'account'
+    config.url 	= 'https://xyz.adobeconnect.com'
+    config.url_path = '/api/xml'
+    config.username = 'user'
+    config.password = 'connectpassword'
+    config.account  = 'account'
   end
 
 To use: 
@@ -47,14 +47,14 @@ Get BREEZESESSION session id:
 User creation:
 
   @connect.user_create({
-    'email' => 'email@example.com',
+    'email'       => 'email@example.com',
     'description' => 'Description',
-    'first-name' => 'First Name',
-    'last-name' =>' Last name',
-    'login' => 'email@example.com',
-    'password'=>'PASSWORD',
-    'send-email'=>0,
-    'type'=>'live-admins'
+    'first-name'  => 'First Name',
+    'last-name'   => 'Last name',
+    'login'       => 'email@example.com',
+    'password'    => 'PASSWORD',
+    'send-email'  => 0,
+    'type'        => 'live-admins'
   })
 
 Get folders:
@@ -81,7 +81,8 @@ Add principal as host of meeting:
 
   @connect.permissions_update({'principal-id' => principal_id,'acl-id' => sco_id, 'permission-id' => 'host' })
 
-<b>TODO:</b> Add tests
+==TODO: 
+Add unit tests
 
 == Contributing to adobe_connect
  
