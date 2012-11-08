@@ -81,6 +81,8 @@ Add principal as host of meeting:
 
   @connect.permissions_update({'principal-id' => principal_id,'acl-id' => sco_id, 'permission-id' => 'host' })
 
+<b>TODO:</b> Add tests
+
 == Contributing to adobe_connect
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
