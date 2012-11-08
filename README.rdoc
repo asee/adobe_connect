@@ -49,6 +49,7 @@ Get BREEZESESSION session id:
 
 User creation:
 
+```ruby
 	@connect.user_create({
 	 	'email' => 'email@example.com',
 	 	'description' => 'Description',
@@ -59,6 +60,7 @@ User creation:
 	 	'send-email'=>0,
 	 	'type'=>'live-admins'
 	})
+```
 
 Get folders:
 
@@ -78,7 +80,9 @@ Create a meeting:
 
 Set meeting as public:
 
+```ruby
 	@connect.permissions_update({'principal-id' => 'public-access','acl-id' => sco_id, 'permission-id' => 'view-hidden' })
+```
 
 Add principal as host of meeting:
 
