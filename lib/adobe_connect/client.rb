@@ -24,7 +24,7 @@ module AdobeConnect
         send("#{key}=", options[key])
       end
 
-      login
+      login unless options[:auto_login]
     end
 
     include AdobeConnect::Request
