@@ -47,13 +47,13 @@ Get BREEZESESSION session id:
 User creation:
 
   @connect.user_create({
-		'email' => 'email@example.com',
-		'description' => 'Description',
-		'first-name' => 'First Name',
-		'last-name' =>' Last name',
-		'login' => 'email@example.com',
-		'password'=>'PASSWORD',
-	 'send-email'=>0,
+    'email' => 'email@example.com',
+    'description' => 'Description',
+    'first-name' => 'First Name',
+    'last-name' =>' Last name',
+    'login' => 'email@example.com',
+    'password'=>'PASSWORD',
+    'send-email'=>0,
     'type'=>'live-admins'
   })
 
@@ -64,13 +64,13 @@ Get folders:
 Create a meeting:
 
   @connect.create_meeting({
-    'author-info-1' => NAME ,
-    'name' 			=> title,
-    'date-begin' 	=> Time.now.iso8601,
-    'date-end' 		=> 1.hour.from_now.iso8601,
-    'url-path' 		=> "/xyz",
-    'folder-id'		=> 123,
-  'source-sco-id'	=> 123
+    'author-info-1'=> NAME ,
+    'name'         => title,
+    'date-begin'  => Time.now.iso8601,
+    'date-end'    => 1.hour.from_now.iso8601,
+    'url-path'    => "/xyz",
+    'folder-id'   => 123,
+  'source-sco-id' => 123
   })
 
 Set meeting as public:
