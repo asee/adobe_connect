@@ -13,6 +13,7 @@ And then execute:
 ## Usage
 Initializer:
 This can be in config/initializers/adobe_connect.rb for example
+	
 	AdobeConnect.configure do |config|
        config.url 		= 'https://xyz.adobeconnect.com'
        config.url_path 	= '/api/xml'
@@ -23,43 +24,46 @@ This can be in config/initializers/adobe_connect.rb for example
 
 To use: 
 
-@connect = AdobeConnect.new
+	@connect = AdobeConnect.new
 
 This will automatically log into adobe connect web service with the default configurations in the initializer.
 To instantiate with a different adobe connect account: 
 
-@connect = AdobeConnect.new({
-	:url 		=> 'https://xyz.adobeconnect.com',
-    :url_path 	=> '/api/xml',
-    :username 	=> 'user',
-    :password 	=> 'connectpassword',
-    :account 	=> 'account',
-    :auto_login => false/true
-})
+	@connect = AdobeConnect.new({
+		:url 		=> 'https://xyz.adobeconnect.com',
+	    :url_path 	=> '/api/xml',
+	    :username 	=> 'user',
+	    :password 	=> 'connectpassword',
+	    :account 	=> 'account',
+	    :auto_login => false/true
+	})
 
 Get BREEZESESSION session id:
-@connect.sessionId
-@connect.cookieDomain
+
+	@connect.sessionId
+
+	@connect.cookieDomain
 
 User creation:
- @connect.user_create({
- 	'email' => 'email@example.com',
- 	'description' => 'Description',
- 	'first-name' => 'First Name',
- 	'last-name' =>' Last name',
- 	'login' => 'email@example.com',
- 	'password'=>'PASSWORD',
- 	'send-email'=>0,
- 	'type'=>'live-admins'
- })
+
+	@connect.user_create({
+	 	'email' => 'email@example.com',
+	 	'description' => 'Description',
+	 	'first-name' => 'First Name',
+	 	'last-name' =>' Last name',
+	 	'login' => 'email@example.com',
+	 	'password'=>'PASSWORD',
+	 	'send-email'=>0,
+	 	'type'=>'live-admins'
+	})
 
 Get folders:
 
-folders = @connect.sco_shortcuts
+	folders = @connect.sco_shortcuts
 
 Create a meeting:
 
-@connect.create_meeting({
+	@connect.create_meeting({
     	'author-info-1' => NAME ,
     	'name' 			=> title,
     	'date-begin' 	=> Time.now.iso8601,
@@ -67,16 +71,15 @@ Create a meeting:
     	'url-path' 		=> "/xyz",
     	'folder-id'		=> 123,
     	'source-sco-id'	=> 123
-})
+	})
 
 Set meeting as public
 
-@connect.permissions_update({'principal-id' => 'public-access','acl-id' => sco_id, 'permission-id' => 'view-hidden' })
+	@connect.permissions_update({'principal-id' => 'public-access','acl-id' => sco_id, 'permission-id' => 'view-hidden' })
 
 Add principal as host of meeting
 
-@connect.permissions_update({'principal-id' => principal_id,'acl-id' => sco_id, 'permission-id' => 'host' })
-
+	@connect.permissions_update({'principal-id' => principal_id,'acl-id' => sco_id, 'permission-id' => 'host' })
 
 == Contributing to adobe_connect
  
