@@ -28,6 +28,7 @@ module AdobeConnect
         req.params ||= {}
         req.params.merge!( options )
         req.params[:session] = sessionId if authenticated?
+        req.params["account-id"] = self.account if self.account
       end
 
       if raw || full
